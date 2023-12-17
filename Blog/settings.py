@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-it&g9oad!ao_f=1fhyl^+0#&(lcb+%s8@y#lbs!5%t+5dludr_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
@@ -135,6 +135,10 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+import os
+STATICFILES_DIR=os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles_build','static')
+
 
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
